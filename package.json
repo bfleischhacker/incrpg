@@ -27,10 +27,10 @@
     "prebuild": "shx rm -rf dist/*",
     "build": "parcel build ./index.html --public-url ./",
     "check": "tsc --noEmit",
-    "push-gh-pages": "node scripts/push-gh-pages.js"
+    "push-gh-pages": "gh-pages -d dist -t true"
   },
   "source": "index.html",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "@parcel/transformer-js": {
     "inlineEnvironment": true
   }
