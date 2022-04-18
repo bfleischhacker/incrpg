@@ -1,0 +1,36 @@
+{
+  "devDependencies": {
+    "@parcel/validator-typescript": "^2.4.1",
+    "@types/react": "^18.0.5",
+    "@types/react-dom": "^18.0.1",
+    "@types/react-resizable": "^1.7.4",
+    "parcel": "^2.4.1",
+    "parcel-plugin-package-version": "^1.0.2",
+    "process": "^0.11.10",
+    "shx": "^0.3.4"
+  },
+  "dependencies": {
+    "@types/parcel-env": "^0.0.1",
+    "antd": "^4.19.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "overrides": {
+    "@types/react": "^18.0.5",
+    "@types/react-dom": "^18.0.1"
+  },
+  "scripts": {
+    "start": "parcel ./index.html",
+    "prebuild-dev": "shx rm -rf dist/*",
+    "build-dev": "parcel build ./index.html --no-optimize --public-url ./",
+    "prebuild": "shx rm -rf dist/*",
+    "build": "parcel build ./index.html --public-url ./",
+    "check": "tsc --noEmit",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+  },
+  "source": "index.html",
+  "version": "0.1.0",
+  "@parcel/transformer-js": {
+    "inlineEnvironment": true
+  }
+}
