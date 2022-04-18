@@ -4,6 +4,7 @@
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.1",
     "@types/react-resizable": "^1.7.4",
+    "gh-pages": "^3.2.3",
     "parcel": "^2.4.1",
     "parcel-plugin-package-version": "^1.0.2",
     "process": "^0.11.10",
@@ -26,10 +27,10 @@
     "prebuild": "shx rm -rf dist/*",
     "build": "parcel build ./index.html --public-url ./",
     "check": "tsc --noEmit",
-    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "push-gh-pages": "node scripts/push-gh-pages.js"
   },
   "source": "index.html",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "@parcel/transformer-js": {
     "inlineEnvironment": true
   }
